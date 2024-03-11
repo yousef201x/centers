@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Branch;
 use App\Models\Company;
 use App\Models\Country;
+use App\Models\Lab;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         Country::factory()->count(100)->create();
         Company::factory()->count(100)->create();
         Branch::factory()->count(100)->create();
+        Lab::factory()->count(100)->create();
 
         // You can call other seeders here if needed
         // $this->call(OtherSeeder::class);

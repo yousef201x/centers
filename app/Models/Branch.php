@@ -16,4 +16,9 @@ class Branch extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function labs()
+    {
+        return $this->hasMany(Lab::class);
+    }
 }
