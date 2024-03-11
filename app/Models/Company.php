@@ -16,4 +16,9 @@ class Company extends Model
     {
         return $this->belongsTo(Country::class, 'country_id', 'id');
     }
+
+    public function branches()
+    {
+        return $this->hasMany(Branch::class);
+    }
 }
