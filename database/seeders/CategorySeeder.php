@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,17 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        for ($i = 0; $i <= 10; $i++) {
+            Category::create([
+                'name' => fake()->name(),
+                'category_id' => null
+            ]);
+        }
+        for ($i = 0; $i <= 90; $i++) {
+            Category::create([
+                'name' => fake()->name(),
+                'category_id' => rand(1, 10),
+            ]);
+        }
     }
 }
