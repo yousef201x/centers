@@ -17,11 +17,6 @@ class Schedule extends Model
         return $this->belongsTo(Course::class);
     }
 
-    public function student()
-    {
-        return $this->belongsTo(User::class, 'student_id');
-    }
-
     public function instructor()
     {
         return $this->belongsTo(User::class, 'instructor_id');
