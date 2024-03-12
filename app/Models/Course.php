@@ -16,4 +16,9 @@ class Course extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class);
+    }
 }

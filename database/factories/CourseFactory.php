@@ -21,6 +21,8 @@ class CourseFactory extends Factory
 
         return [
             'name' => $this->faker->name,
+            'hours' => rand(20, 144),
+            'price' => rand(1500, 10000),
             'description' => $this->faker->sentence(10),
             'category_id' => $this->faker->randomElement($categories),
         ];
