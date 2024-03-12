@@ -25,11 +25,11 @@ class DatabaseSeeder extends Seeder
         Company::factory()->count(100)->create();
         Branch::factory()->count(100)->create();
         Lab::factory()->count(100)->create();
-
-        $this->call([
-            CategorySeeder::class
-        ]);
-
+        $this->call(CategorySeeder::class);
         Course::factory()->count(100)->create();
+        $this->call([
+            RoleSeeder::class,
+            UserSeeder::class,
+        ]);
     }
 }
